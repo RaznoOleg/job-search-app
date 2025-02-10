@@ -1,40 +1,89 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Job Search App
 
-## Getting Started
+## Overview
+Job Search App is a Next.js 14 application built with TypeScript. It provides a job searching experience with authentication, profile creation, job listings, and the ability to save liked jobs.
 
-First, run the development server:
+## Technologies Used
+- **Next.js 14** with **TypeScript**
+- **Tailwind CSS** for styling (basic styles for readability and structure)
+- **Formik** for form handling
+- **Yup** for form validation
+- **Axios** for HTTP requests with **SWR** hooks (`useSWR`)
+- **Vercel** for deployment
 
-```bash
+## Project Structure
+```
+📂 job-search-app/
+│📂 public/
+│📂 src/
+│├── 📂 api/
+││ ├── 📂 services/
+│├── 📂 app/ (Next.js App Router)
+││ ├── 📂 pages/
+││ ├── 📂 auth/
+││ ├── 📂 create-profile/
+││ ├── 📂 job-details/
+││ ├── 📂 jobs/
+││ ├── 📂 liked/
+│├── 📂 components/ (Reusable UI components)
+││ ├── 📂 AuthForm/
+││ ├── 📂 JobDetailsCard/
+││ ├── 📂 JobListCard/
+││ ├── 📂 Navbar/
+││ ├── 📂 ProfileForm/
+││ ├── 📂 SearchBar/
+│├── 📂 context/ (Global context management)
+│├── 📂 hooks/ (Custom React hooks)
+│├── 📂 schemas/ (Validation schemas with Yup)
+│├── 📂 types/ (TypeScript types & assets)
+│├── .env.local (Environment variables)
+```
+
+## Environment Variables
+Create a `.env.local` file and add the following environment variables:
+```
+NEXT_PUBLIC_RAPIDAPI_KEY=your_api_key
+NEXT_PUBLIC_RAPIDAPI_HOST=your_api_host
+NEXT_PUBLIC_CLIENT_API_URL=your_client_api_url
+NEXT_PUBLIC_AUTH_API_URL=your_auth_api_url
+```
+
+## Installation & Setup
+### 1. Clone the Repository
+```sh
+git clone https://github.com/your-repo/job-search-app.git
+cd job-search-app
+```
+
+### 2. Install Dependencies
+```sh
+npm install
+# or
+yarn install
+```
+
+### 3. Run the Development Server
+```sh
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+Open [http://localhost:3000](http://localhost:3000) to view the app in the browser.
+
+### 4. Build for Production
+```sh
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 5. Deployment
+The app is deployed using **Vercel**. To deploy, use:
+```sh
+vercel
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contributing
+Feel free to fork this repository and submit pull requests with improvements!
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## License
+This project is licensed under the MIT License.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# job-search-app
->>>>>>> 7918e1d33a6d93cc21a3302d449a4b0da295b95a
